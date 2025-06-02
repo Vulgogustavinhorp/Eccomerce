@@ -1,0 +1,137 @@
+/* Importa a fonte para o logo */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    /* Imagem de fundo roxo */
+    background-image: url('background.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #3a0e5b; /* Cor de fallback caso a imagem não carregue */
+}
+
+/* Cabeçalho e Logo */
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative; /* Necessário para o posicionamento do logo de imagem */
+}
+
+
+
+/* Efeito Neon para o Logo */
+.logo-neon {
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem; /* Tamanho da fonte */
+    color: #fff;
+    margin: 0;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
+    animation: flicker 1.5s infinite alternate; /* Animação de piscar */
+}
+
+/* Animação de piscar para o efeito neon */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.subtitle {
+    margin-top: -10px;
+    font-size: 1.2rem;
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container dos Produtos */
+.products-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 30px; /* Espaçamento entre os cartões */
+}
+
+/* Cartão de Produto Individual */
+.product-card {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    border: 1px solid #bc13fe;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(188, 19, 254, 0.8);
+}
+
+/* Imagem do Produto */
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00fddc; /* Cor de destaque para o preço */
+    margin: 10px 0;
+}
+
+/* Botão "Adicionar ao Carrinho" */
+.add-to-cart-btn {
+    background-color: #bc13fe;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #a10fd6;
+    box-shadow: 0 0 15px #bc13fe;
+}
